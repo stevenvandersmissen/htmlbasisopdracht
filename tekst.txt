@@ -1,0 +1,126 @@
+HTML BASIS — AANGELEVERDE WEBSITETEKSTEN
+5 Crossmedia
+
+Gebruik de teksten hieronder in je eigen HTML-bestanden. De labels zoals
+“Paginakop”, “Onderdeel” en “Gegevensrijen” zijn instructies: die neem je niet
+over op je website. Je schrijft zelf de HTML-code. Vervang [voornaam achternaam]
+door je eigen naam. De theorievragen en reflectie beantwoord je zelf.
+FRAME en de evenementgegevens zijn fictief.
+
+==================================================
+PAGINA 1 — index.html
+==================================================
+
+Browsertitel:
+FRAME — Home
+
+Paginakop:
+FRAME — Media-expo voor jonge makers
+
+Navigatie:
+Home
+Meer info
+
+Ankerlink:
+Ontdek wat je kunt beleven
+
+Onderdeel 1 — Over FRAME
+
+FRAME is een media-expo waar jonge makers hun werk tonen. Fotografie, video, geluid en digitale verhalen komen samen op één plek. Je ontdekt hoe een idee kan uitgroeien tot een verhaal dat anderen raakt.
+
+De expo is bedoeld voor jongeren van 15 tot 20 jaar die nieuwsgierig zijn naar media en creativiteit. Je hoeft geen ervaring te hebben. Kijken, luisteren en vragen stellen is genoeg om nieuwe ideeën op te doen.
+
+Onderdeel 2 — Wat kun je ontdekken?
+
+Tijdens FRAME bekijk je projecten van leerlingen en praat je met de makers achter het werk. Elk project vertrekt vanuit een eigen onderwerp en een eigen blik op de wereld. De toegang is gratis.
+
+Lijst met wat je kunt beleven:
+Fotoreeksen die een persoonlijk verhaal vertellen.
+Korte video's die je anders naar alledaagse situaties laten kijken.
+Geluidsverhalen die sfeer en emotie oproepen.
+Digitale projecten die beeld en tekst combineren.
+
+Footer:
+Website gemaakt door [voornaam achternaam] — 5 Crossmedia.
+FRAME is een fictief evenement voor deze HTML-oefening.
+
+==================================================
+PAGINA 2 — info.html
+==================================================
+
+Browsertitel:
+FRAME — Meer info
+
+Paginakop:
+FRAME — Programma en makers
+
+Navigatie:
+Home
+Meer info
+
+Artikel — Van idee naar beeld
+
+Een sterk mediaproject begint niet bij een camera of een computer, maar bij een vraag. Wat wil je vertellen? Wie wil je bereiken? De makers van FRAME zoeken eerst naar een onderwerp dat hen bezighoudt en kiezen daarna de media die bij hun verhaal passen.
+
+Bij het uitwerken van een project maken ze schetsen, verzamelen ze materiaal en testen ze verschillende versies. Ze vragen feedback en passen hun werk aan. Zo groeit een eerste idee stap voor stap uit tot een project met een duidelijke boodschap. Ook jouw blik kan het begin zijn van een nieuw verhaal.
+
+Subonderdeel van het artikel — Zo neem je deel
+
+Stappen in volgorde:
+Kies een onderwerp dat je interessant vindt en noteer wat je wilt vertellen.
+Werk je idee uit met fotografie, video, geluid of een combinatie van media.
+Breng je project mee en vertel aan bezoekers hoe je het hebt gemaakt.
+
+Onderdeel — Programma
+
+De expo vindt plaats op vrijdag 14 mei 2027 in de mediaruimte van de school. Je kunt vrij rondkijken en aansluiten bij de activiteiten die je interesseren.
+
+Tabelbijschrift:
+Programma van FRAME — vrijdag 14 mei 2027
+
+Kolomkoppen:
+Tijd | Activiteit | Locatie
+
+Gegevensrijen:
+13.00 uur | Opening van de expo | Mediaruimte
+13.30 uur | Gesprek met de makers | Presentatiehoek
+14.00 uur | Workshop: vertel met beeld | Medialab
+15.00 uur | Vrij bezoek en afsluiting | Mediaruimte
+
+Aanvullende informatie — Wist je dat?
+
+Hetzelfde verhaal kan via verschillende media worden verteld. Een foto toont één moment, een video toont een verloop en geluid kan een sfeer oproepen. Door media te combineren, kun je verschillende kanten van een verhaal laten zien.
+
+Bijschrift bij de tweede afbeelding:
+Beeld, geluid en tekst zijn bouwstenen van een mediaverhaal.
+
+Onderdeel — Meer inspiratie
+
+Wil je meer ontdekken over fotografie? Bekijk dan de website van het FOMU.
+
+Externe linktekst:
+Ontdek fotografie bij het FOMU
+
+Externe URL:
+https://fomu.be/
+
+Footer:
+Website gemaakt door [voornaam achternaam] — 5 Crossmedia.
+FRAME is een fictief evenement voor deze HTML-oefening.
+
+==================================================
+BEELDEN EN HTML-TOEPASSING
+==================================================
+
+Kies zelf twee verschillende, passende afbeeldingen die je mag gebruiken.
+Schrijf voor elke afbeelding een alt-tekst die past bij het echte beeld.
+Zet op info.html de tweede afbeelding in een figure met het aangeleverde bijschrift.
+Noteer de beeldbronnen in reflectie.txt.
+
+Gebruik strong voor: De toegang is gratis.
+Gebruik em voor de woorden: jouw blik
+Maak op index.html een ankerlink naar id="ontdek" bij “Wat kun je ontdekken?”.
+Gebruik in het artikel op info.html een h2 voor “Van idee naar beeld” en een h3
+voor “Zo neem je deel”.
+De navigatie linkt naar index.html en info.html.
+Zet de programmagegevens in een tabel, niet in een gewone tekstregel.
