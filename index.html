@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML basis | 5 Crossmedia</title>
+<style>
+:root{--paper:#f2f0e6;--ink:#141414;--acid:#dcff00}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:18px;line-height:1.55}a{color:inherit;text-decoration-thickness:2px;text-underline-offset:4px}a:focus-visible,summary:focus-visible{outline:4px solid #eb4d22;outline-offset:5px}.top{display:flex;justify-content:space-between;gap:16px;padding:14px 4vw;border-bottom:3px solid var(--ink);font-family:monospace;font-size:15px;font-weight:bold;text-transform:uppercase}.hero{padding:50px 4vw 35px;border-bottom:3px solid var(--ink)}.label{display:inline-block;background:var(--ink);color:var(--paper);padding:5px 12px;font-family:monospace;font-weight:bold}.hero h1{font-size:clamp(52px,10vw,145px);line-height:.9;letter-spacing:-.055em;text-transform:uppercase;margin:24px 0 28px;max-width:1100px}.hero p{max-width:760px;font-size:22px}.tags{display:flex;flex-wrap:wrap;gap:10px}.tags span{border:2px solid var(--ink);padding:5px 10px;font-family:monospace;font-weight:bold;background:var(--acid)}nav{padding:20px 4vw;border-bottom:3px solid var(--ink);display:flex;flex-wrap:wrap;gap:12px 26px;font-family:monospace;font-weight:bold}main{max-width:1320px;margin:auto;padding:0 4vw}section{padding:40px 0;border-bottom:3px solid var(--ink);scroll-margin-top:20px}.heading{display:flex;align-items:baseline;gap:20px;margin-bottom:24px}.number{font-family:monospace;font-size:22px;background:var(--acid);padding:2px 8px;border:2px solid var(--ink)}h2{font-size:clamp(28px,4vw,48px);line-height:1.1;letter-spacing:-.03em;margin:0;text-transform:uppercase}h3{font-size:23px;margin:0 0 12px}p{margin:0 0 16px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.card{border:2px solid var(--ink);padding:24px;box-shadow:6px 6px 0 var(--ink)}.card.acid{background:var(--acid)}.note{border-left:8px solid var(--ink);padding:16px 20px;background:white;margin:22px 0}.mono,code,pre{font-family:Consolas,'Courier New',monospace}code{font-size:.92em;background:#e0ddcf;padding:1px 4px}pre{background:var(--ink);color:var(--paper);padding:24px;overflow:auto;font-size:15px;line-height:1.5;margin:18px 0}pre code{background:none;padding:0;font-size:inherit}ul,ol{padding-left:25px;margin:12px 0}li{margin:7px 0}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:16px;margin:18px 0}caption{text-align:left;font-weight:bold;margin-bottom:10px}th,td{border:2px solid var(--ink);padding:12px;text-align:left;vertical-align:top}th{background:var(--ink);color:var(--paper)}details{border:2px solid var(--ink);padding:14px 18px;margin:14px 0}summary{font-weight:bold;cursor:pointer}details p{margin:15px 0 0}.steps{counter-reset:steps;list-style:none;padding:0}.steps>li{counter-increment:steps;border:2px solid var(--ink);padding:20px 22px;margin-bottom:16px}.steps>li::before{content:'STAP 0' counter(steps);display:block;font-family:monospace;font-weight:bold;margin-bottom:8px}.check{list-style:none;padding:0}.check li::before{content:'□ ';font-weight:bold}.wide{grid-column:1/-1}.small{font-size:15px}.footer{padding:28px 4vw;font-family:monospace;background:var(--ink);color:var(--paper)}.footer p{margin:0}.copytext{white-space:pre-wrap;overflow-wrap:anywhere;background:white;color:var(--ink);border:2px solid var(--ink);font-size:16px;line-height:1.65}.download{display:inline-block;padding:12px 18px;background:var(--acid);border:2px solid var(--ink);font-family:monospace;font-weight:bold;box-shadow:4px 4px 0 var(--ink);margin:8px 0 24px}.deadline{border:2px dashed var(--ink);padding:14px;margin-top:20px;font-family:monospace}@media(max-width:720px){.grid{grid-template-columns:1fr}.top{flex-direction:column;gap:3px}.hero{padding-top:32px}.hero p{font-size:19px}.card{padding:18px}.heading{gap:12px}body{font-size:17px}th,td{padding:8px}.hero h1{font-size:clamp(48px,13vw,90px)}}@media print{body{background:white;font-size:10pt}nav{display:none}.hero h1{font-size:42pt}.hero{padding:18px 0}.hero p{font-size:12pt}.top,main,.footer{padding-left:0;padding-right:0}.grid{display:block}.card{box-shadow:none;margin-bottom:12px;break-inside:avoid}section{padding:20px 0}h2{font-size:22pt}h3{font-size:14pt}pre{white-space:pre-wrap;font-size:9pt;background:#eee;color:black}th{background:#ddd;color:black}table{font-size:9pt}.footer{background:white;color:black}a{text-decoration:none}details{display:none}}
+</style>
+</head>
+<body>
+<header>
+<div class="top"><span>5 Crossmedia / Web / Opdracht 01</span><span>Structuur vóór stijl</span></div>
+<div class="hero">
+<span class="label">Herhalen → bouwen → bewijzen</span>
+<h1>HTML<br>basis</h1>
+<p>Bouw een kleine website die laat zien dat je de basis van HTML beheerst. Geen CSS, geen boxmodel. Wel heldere inhoud, correcte code en een logische structuur.</p>
+<div class="tags"><span>INDIVIDUEEL</span><span>2 HTML-PAGINA’S</span><span>100% HTML</span><span>/20 PUNTEN</span></div>
+<p class="small" style="margin-top:18px">Voorgestelde werktijd: 3 lesuren + afwerking. Inleveren: één zipbestand op Smartschool. De deadline wordt door je leerkracht meegedeeld.</p>
+</div>
+<nav aria-label="Onderdelen van de opdracht"><a href="#doel">01 / Doel</a><a href="#theorie">02 / Theorie</a><a href="#opdracht">03 / Opdracht</a><a href="#copy">04 / Websiteteksten</a><a href="#aanpak">05 / Aanpak</a><a href="#inleveren">06 / Inleveren</a><a href="#beoordeling">07 / Beoordeling</a></nav>
+</header>
+<main>
+<section id="doel">
+<div class="heading"><span class="number">01</span><h2>Wat toon je aan?</h2></div>
+<div class="grid">
+<div class="card"><h3>Na deze opdracht kan je…</h3><ul><li>een HTML-document opbouwen met de juiste basisstructuur;</li><li>inhoud verdelen over betekenisvolle structuurelementen;</li><li>koppen, tekst, lijsten, links, afbeeldingen en een eenvoudige tabel correct gebruiken;</li><li>werken met relatieve bestandspaden;</li><li>je HTML controleren en je keuzes uitleggen.</li></ul></div>
+<div class="card acid"><h3>Focus op HTML</h3><p>De teksten voor je website staan klaar in deze opdracht. Jij zorgt voor de juiste HTML-elementen, een logische structuur en werkende links en afbeeldingen.</p><p><strong>Je wordt niet beoordeeld op kleuren, lettertypes, kolommen of andere vormgeving.</strong> Laat de standaardweergave van de browser staan.</p></div>
+</div>
+<aside class="note"><strong>Belangrijk:</strong> deze opdrachtwebsite is vormgegeven om de briefing leesbaar te presenteren. In jouw eigen ingeleverde website gebruik je <strong>geen CSS</strong>: geen stylesheet, geen <code>&lt;style&gt;</code> en geen <code>style</code>-attributen. Ook geen JavaScript, frameworks of verouderde opmaaktags zoals <code>&lt;font&gt;</code> en <code>&lt;center&gt;</code>.</aside>
+</section>
+<section id="theorie">
+<div class="heading"><span class="number">02</span><h2>Eerst de basis herhalen</h2></div>
+<p>Lees dit overzicht voordat je begint. Gebruik het tijdens het bouwen als naslagwerk. De controlevragen onderaan werk je uit in een apart tekstbestand.</p>
+<h3>A. De vaste documentstructuur</h3>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="nl"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Naam van je website — Home&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;h1&gt;Naam van je website&lt;/h1&gt;
+      &lt;nav aria-label="Hoofdnavigatie"&gt;
+        &lt;a href="index.html"&gt;Home&lt;/a&gt;
+        &lt;a href="info.html"&gt;Meer info&lt;/a&gt;
+      &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+      &lt;section&gt;
+        &lt;h2&gt;Over dit project&lt;/h2&gt;
+        &lt;p&gt;Hier komt je introductie.&lt;/p&gt;
+      &lt;/section&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;
+      &lt;p&gt;Gemaakt door Voornaam — 5 Crossmedia&lt;/p&gt;
+    &lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<ul><li><code>&lt;!DOCTYPE html&gt;</code> geeft aan dat je moderne HTML gebruikt.</li><li><code>&lt;html lang="nl"&gt;</code> bevat het document en vermeldt de taal.</li><li><code>&lt;head&gt;</code> bevat informatie over de pagina. <code>&lt;title&gt;</code> verschijnt bijvoorbeeld in het browsertabblad.</li><li><code>&lt;body&gt;</code> bevat de inhoud die bezoekers op de pagina lezen en gebruiken.</li><li>Een element bestaat meestal uit een openingstag, inhoud en een sluitingstag. Nest elementen correct: het laatst geopende element sluit je eerst.</li><li>Een attribuut geeft extra informatie, bijvoorbeeld <code>href</code> bij een link of <code>src</code> en <code>alt</code> bij een afbeelding. Elementen zoals <code>&lt;img&gt;</code>, <code>&lt;meta&gt;</code> en <code>&lt;br&gt;</code> hebben geen sluitingstag.</li></ul>
+<h3>B. Structuur met betekenis</h3>
+<div class="table-wrap"><table><caption>Structuurelementen: kies op basis van de inhoud, niet van het uiterlijk.</caption><thead><tr><th scope="col">Element</th><th scope="col">Waarvoor gebruik je het?</th></tr></thead><tbody>
+<tr><td><code>&lt;header&gt;</code></td><td>Inleidende inhoud, zoals de sitenaam en de introductie van een pagina.</td></tr>
+<tr><td><code>&lt;nav&gt;</code></td><td>Een belangrijk blok navigatielinks, bijvoorbeeld het menu.</td></tr>
+<tr><td><code>&lt;main&gt;</code></td><td>De unieke hoofdinhoud van de pagina. Gebruik in deze opdracht één <code>main</code> per pagina.</td></tr>
+<tr><td><code>&lt;section&gt;</code></td><td>Een thematisch onderdeel, meestal met een eigen kop.</td></tr>
+<tr><td><code>&lt;article&gt;</code></td><td>Een zelfstandig stukje inhoud, zoals een recensie, nieuwsbericht of makersprofiel.</td></tr>
+<tr><td><code>&lt;aside&gt;</code></td><td>Aanvullende informatie, zoals een weetje. Het hoeft niet letterlijk naast de hoofdinhoud te staan.</td></tr>
+<tr><td><code>&lt;footer&gt;</code></td><td>Afsluitende informatie, zoals de maker en bronnen.</td></tr>
+<tr><td><code>&lt;div&gt;</code></td><td>Een algemene container zonder specifieke betekenis. Gebruik die alleen wanneer geen betekenisvol element past.</td></tr>
+</tbody></table></div>
+<h3>C. De basiselementen</h3>
+<div class="table-wrap"><table><caption>Elementen die je in je website toepast.</caption><thead><tr><th scope="col">Onderdeel</th><th scope="col">Code / regel</th></tr></thead><tbody>
+<tr><td>Koppen</td><td><code>&lt;h1&gt;</code> tot <code>&lt;h6&gt;</code> geven niveaus aan. Gebruik voor deze opdracht één duidelijke <code>h1</code> per pagina, daarna <code>h2</code> voor onderdelen en <code>h3</code> voor subonderdelen. Kies geen niveau omdat de tekst groter of kleiner lijkt.</td></tr>
+<tr><td>Tekst</td><td><code>&lt;p&gt;</code> voor alinea’s, <code>&lt;strong&gt;</code> voor belangrijkheid en <code>&lt;em&gt;</code> voor nadruk. Gebruik <code>&lt;br&gt;</code> alleen voor een inhoudelijke regelafbreking, niet om lege ruimte te maken.</td></tr>
+<tr><td>Lijsten</td><td><code>&lt;ul&gt;</code> voor een ongeordende lijst, <code>&lt;ol&gt;</code> voor een volgorde; elk item staat in <code>&lt;li&gt;</code>.</td></tr>
+<tr><td>Links</td><td><code>&lt;a href="info.html"&gt;Bekijk het programma&lt;/a&gt;</code>. Gebruik beschrijvende linktekst in plaats van alleen “klik hier”.</td></tr>
+<tr><td>Afbeeldingen</td><td><code>&lt;img src="images/affiche.jpg" alt="Zwart-witte affiche met een handgetekende microfoon"&gt;</code>. Beschrijf de relevante informatie. Een puur decoratief beeld krijgt <code>alt=""</code>; voor deze opdracht kies je informatieve beelden.</td></tr>
+<tr><td>Beeld met bijschrift</td><td>Zet een afbeelding in <code>&lt;figure&gt;</code> en voeg een <code>&lt;figcaption&gt;</code> toe. Een bijschrift is zichtbaar; alternatieve tekst heeft een ander doel en blijft nodig.</td></tr>
+<tr><td>Tabel</td><td><code>&lt;table&gt;</code>, <code>&lt;caption&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th scope="col"&gt;</code> en <code>&lt;td&gt;</code>. Gebruik een tabel voor gegevens, nooit om je pagina in kolommen te verdelen.</td></tr>
+</tbody></table></div>
+<h3>D. Links en bestandspaden</h3>
+<pre><code>&lt;!-- Een andere pagina in dezelfde map --&gt;
+&lt;a href="info.html"&gt;Meer info&lt;/a&gt;
+
+&lt;!-- Een afbeelding in de submap images --&gt;
+&lt;img src="images/foto.jpg" alt="Een dj achter een mengpaneel"&gt;
+
+&lt;!-- Een link naar een onderdeel op dezelfde pagina --&gt;
+&lt;a href="#programma"&gt;Naar het programma&lt;/a&gt;
+&lt;section id="programma"&gt;
+  &lt;h2&gt;Programma&lt;/h2&gt;
+  &lt;p&gt;Ontdek wat er op het programma staat.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;!-- Een externe website --&gt;
+&lt;a href="https://developer.mozilla.org/nl/docs/Web/HTML"&gt;
+  HTML-documentatie op MDN
+&lt;/a&gt;</code></pre>
+<p>Bestandsnamen zijn kort, duidelijk, in kleine letters en zonder spaties. Let op hoofdletters en extensies: <code>foto.jpg</code> is niet hetzelfde als <code>Foto.JPG</code>. Gebruik geen pad naar jouw eigen computer, zoals <code>C:\Users\...</code>.</p>
+<div class="card acid"><h3>Bewijs van je theoriekennis</h3><p>Beantwoord in <code>reflectie.txt</code> met je eigen woorden:</p><ol><li>Wat is het verschil tussen <code>head</code> en <code>header</code>?</li><li>Wat is het verschil tussen een HTML-element en een attribuut? Geef een voorbeeld uit je eigen code.</li><li>Waarom kies je voor <code>section</code> of <code>article</code>? Verwijs naar één concrete keuze in jouw website.</li><li>Waarom heeft een informatieve afbeelding een <code>alt</code>-attribuut nodig?</li><li>Wat is een relatief bestandspad? Leg één pad uit jouw website uit.</li><li>Waarom gebruik je geen tabel of herhaalde <code>br</code>-tags om een lay-out te maken?</li></ol></div>
+<details><summary>Zelftest: herken je deze drie fouten?</summary><pre><code>&lt;p&gt;Welkom op mijn site&lt;/h2&gt;
+&lt;img href="images/foto.jpg"&gt;
+&lt;ul&gt;Concerten&lt;/ul&gt;</code></pre><p>De alinea heeft de verkeerde sluitingstag. De afbeelding heeft <code>src</code> nodig in plaats van <code>href</code>, en ook een passend <code>alt</code>-attribuut. De lijstinhoud moet in een <code>li</code>-element staan.</p></details>
+</section>
+<section id="opdracht">
+<div class="heading"><span class="number">03</span><h2>Jouw opdracht: FRAME</h2></div>
+<p><strong>Maak een tweepaginawebsite voor FRAME, een fictieve media-expo voor jonge makers.</strong> De expo brengt fotografie, video, geluid en digitale verhalen samen. De doelgroep is jongeren van 15 tot 20 jaar met interesse in media en creativiteit.</p>
+<p>Gebruik alle aangeleverde websiteteksten uit <a href="#copy">onderdeel 04</a>. Je hoeft geen eigen concept of teksten te bedenken. Jij zet de inhoud om naar correcte HTML. Kies zelf twee passende beelden: eigen beelden of beelden die je mag gebruiken. Vermeld de beeldbronnen in je reflectie.</p>
+<div class="grid">
+<div class="card"><h3>Pagina 1 / index.html</h3><p>De startpagina: introduceer FRAME en laat zien wat bezoekers kunnen ontdekken.</p><ul><li>Een <code>header</code> met sitenaam en één <code>h1</code>.</li><li>Een <code>nav</code> met links naar beide pagina’s.</li><li>Eén <code>main</code> met minstens twee thematische <code>section</code>-elementen, elk met een <code>h2</code>.</li><li>Minstens drie inhoudelijke alinea’s.</li><li>Een ongeordende lijst met minstens drie items.</li><li>Een informatieve afbeelding met passende <code>alt</code>-tekst.</li><li>Een werkende ankerlink “Ontdek wat je kunt beleven” naar de sectie met <code>id="ontdek"</code> op deze pagina.</li><li>Een <code>footer</code> met jouw naam en klas.</li></ul></div>
+<div class="card"><h3>Pagina 2 / info.html</h3><p>De verdiepingspagina: presenteer het makersverhaal, het programma en de deelnamestappen.</p><ul><li>Dezelfde hoofdnavigatie en een eigen paginatitel in <code>title</code>.</li><li>Een <code>header</code>, één <code>h1</code>, één <code>main</code> en een <code>footer</code>.</li><li>Een <code>article</code> met de kop “Van idee naar beeld” en de twee aangeleverde alinea’s.</li><li>Een <code>aside</code> met de aanvullende informatie onder “Wist je dat?”.</li><li>Een geordende lijst met de drie stappen onder “Zo neem je deel”.</li><li>Een gegevenstabel met bijschrift, minstens twee kolommen en drie gegevensrijen, plus kolomkoppen met <code>th</code> en <code>scope="col"</code>.</li><li>Een tweede informatieve afbeelding in een <code>figure</code>, met <code>alt</code> en een <code>figcaption</code>.</li><li>Een externe link met de aangeleverde linktekst en URL van het FOMU.</li></ul></div>
+</div>
+<aside class="note"><strong>Over beide pagina’s samen:</strong> gebruik minstens één <code>strong</code> en één <code>em</code> waar de betekenis dat vraagt. Gebruik een <code>h3</code> voor minstens één echt subonderdeel onder een <code>h2</code>. Voeg één eigen HTML-commentaar toe dat een structuurkeuze uitlegt. Alle navigatielinks en afbeeldingen moeten werken.</aside>
+<h3>Zo verwerk je de aangeleverde inhoud</h3><ul><li>Neem de websiteteksten letterlijk over, maar kopieer geen HTML van deze opdrachtwebsite.</li><li>Zet elke alinea, kop, lijst en tabel in passende HTML-elementen.</li><li>Geef “De toegang is gratis.” belangrijkheid met <code>strong</code> en geef “jouw blik” nadruk met <code>em</code>.</li><li>Gebruik op <code>info.html</code> “Van idee naar beeld” als <code>h2</code> en “Zo neem je deel” als <code>h3</code> binnen dat artikel.</li><li>Laat de standaardopmaak van de browser staan. Voeg geen CSS toe.</li></ul>
+<p class="small"><strong>Niet nodig:</strong> formulieren, video, animaties, responsive lay-outs of kennis van het boxmodel. HTML-structuur en inhoud staan centraal.</p>
+</section>
+<section id="copy">
+<div class="heading"><span class="number">04</span><h2>Alle websiteteksten</h2></div>
+<p><strong>Hier staat alle inhoud die je nodig hebt.</strong> Neem de teksten over in jouw HTML-bestanden en schrijf zelf de bijbehorende code. De labels zoals “Paginakop”, “Onderdeel” en “Gegevensrijen” zijn instructies en horen niet als tekst op je website.</p>
+<p>Vervang <code>[voornaam achternaam]</code> door je eigen naam. De theorievragen en reflectie beantwoord je zelf. FRAME en de vermelde evenementgegevens zijn fictief.</p>
+<a class="download" href="data:text/plain;charset=utf-8,HTML%20BASIS%20%E2%80%94%20AANGELEVERDE%20WEBSITETEKSTEN%0A5%20Crossmedia%0A%0AGebruik%20de%20teksten%20hieronder%20in%20je%20eigen%20HTML-bestanden.%20De%20labels%20zoals%0A%E2%80%9CPaginakop%E2%80%9D%2C%20%E2%80%9COnderdeel%E2%80%9D%20en%20%E2%80%9CGegevensrijen%E2%80%9D%20zijn%20instructies%3A%20die%20neem%20je%20niet%0Aover%20op%20je%20website.%20Je%20schrijft%20zelf%20de%20HTML-code.%20Vervang%20%5Bvoornaam%20achternaam%5D%0Adoor%20je%20eigen%20naam.%20De%20theorievragen%20en%20reflectie%20beantwoord%20je%20zelf.%0AFRAME%20en%20de%20evenementgegevens%20zijn%20fictief.%0A%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0APAGINA%201%20%E2%80%94%20index.html%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0A%0ABrowsertitel%3A%0AFRAME%20%E2%80%94%20Home%0A%0APaginakop%3A%0AFRAME%20%E2%80%94%20Media-expo%20voor%20jonge%20makers%0A%0ANavigatie%3A%0AHome%0AMeer%20info%0A%0AAnkerlink%3A%0AOntdek%20wat%20je%20kunt%20beleven%0A%0AOnderdeel%201%20%E2%80%94%20Over%20FRAME%0A%0AFRAME%20is%20een%20media-expo%20waar%20jonge%20makers%20hun%20werk%20tonen.%20Fotografie%2C%20video%2C%20geluid%20en%20digitale%20verhalen%20komen%20samen%20op%20%C3%A9%C3%A9n%20plek.%20Je%20ontdekt%20hoe%20een%20idee%20kan%20uitgroeien%20tot%20een%20verhaal%20dat%20anderen%20raakt.%0A%0ADe%20expo%20is%20bedoeld%20voor%20jongeren%20van%2015%20tot%2020%20jaar%20die%20nieuwsgierig%20zijn%20naar%20media%20en%20creativiteit.%20Je%20hoeft%20geen%20ervaring%20te%20hebben.%20Kijken%2C%20luisteren%20en%20vragen%20stellen%20is%20genoeg%20om%20nieuwe%20idee%C3%ABn%20op%20te%20doen.%0A%0AOnderdeel%202%20%E2%80%94%20Wat%20kun%20je%20ontdekken%3F%0A%0ATijdens%20FRAME%20bekijk%20je%20projecten%20van%20leerlingen%20en%20praat%20je%20met%20de%20makers%20achter%20het%20werk.%20Elk%20project%20vertrekt%20vanuit%20een%20eigen%20onderwerp%20en%20een%20eigen%20blik%20op%20de%20wereld.%20De%20toegang%20is%20gratis.%0A%0ALijst%20met%20wat%20je%20kunt%20beleven%3A%0AFotoreeksen%20die%20een%20persoonlijk%20verhaal%20vertellen.%0AKorte%20video%27s%20die%20je%20anders%20naar%20alledaagse%20situaties%20laten%20kijken.%0AGeluidsverhalen%20die%20sfeer%20en%20emotie%20oproepen.%0ADigitale%20projecten%20die%20beeld%20en%20tekst%20combineren.%0A%0AFooter%3A%0AWebsite%20gemaakt%20door%20%5Bvoornaam%20achternaam%5D%20%E2%80%94%205%20Crossmedia.%0AFRAME%20is%20een%20fictief%20evenement%20voor%20deze%20HTML-oefening.%0A%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0APAGINA%202%20%E2%80%94%20info.html%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0A%0ABrowsertitel%3A%0AFRAME%20%E2%80%94%20Meer%20info%0A%0APaginakop%3A%0AFRAME%20%E2%80%94%20Programma%20en%20makers%0A%0ANavigatie%3A%0AHome%0AMeer%20info%0A%0AArtikel%20%E2%80%94%20Van%20idee%20naar%20beeld%0A%0AEen%20sterk%20mediaproject%20begint%20niet%20bij%20een%20camera%20of%20een%20computer%2C%20maar%20bij%20een%20vraag.%20Wat%20wil%20je%20vertellen%3F%20Wie%20wil%20je%20bereiken%3F%20De%20makers%20van%20FRAME%20zoeken%20eerst%20naar%20een%20onderwerp%20dat%20hen%20bezighoudt%20en%20kiezen%20daarna%20de%20media%20die%20bij%20hun%20verhaal%20passen.%0A%0ABij%20het%20uitwerken%20van%20een%20project%20maken%20ze%20schetsen%2C%20verzamelen%20ze%20materiaal%20en%20testen%20ze%20verschillende%20versies.%20Ze%20vragen%20feedback%20en%20passen%20hun%20werk%20aan.%20Zo%20groeit%20een%20eerste%20idee%20stap%20voor%20stap%20uit%20tot%20een%20project%20met%20een%20duidelijke%20boodschap.%20Ook%20jouw%20blik%20kan%20het%20begin%20zijn%20van%20een%20nieuw%20verhaal.%0A%0ASubonderdeel%20van%20het%20artikel%20%E2%80%94%20Zo%20neem%20je%20deel%0A%0AStappen%20in%20volgorde%3A%0AKies%20een%20onderwerp%20dat%20je%20interessant%20vindt%20en%20noteer%20wat%20je%20wilt%20vertellen.%0AWerk%20je%20idee%20uit%20met%20fotografie%2C%20video%2C%20geluid%20of%20een%20combinatie%20van%20media.%0ABreng%20je%20project%20mee%20en%20vertel%20aan%20bezoekers%20hoe%20je%20het%20hebt%20gemaakt.%0A%0AOnderdeel%20%E2%80%94%20Programma%0A%0ADe%20expo%20vindt%20plaats%20op%20vrijdag%2014%20mei%202027%20in%20de%20mediaruimte%20van%20de%20school.%20Je%20kunt%20vrij%20rondkijken%20en%20aansluiten%20bij%20de%20activiteiten%20die%20je%20interesseren.%0A%0ATabelbijschrift%3A%0AProgramma%20van%20FRAME%20%E2%80%94%20vrijdag%2014%20mei%202027%0A%0AKolomkoppen%3A%0ATijd%20%7C%20Activiteit%20%7C%20Locatie%0A%0AGegevensrijen%3A%0A13.00%20uur%20%7C%20Opening%20van%20de%20expo%20%7C%20Mediaruimte%0A13.30%20uur%20%7C%20Gesprek%20met%20de%20makers%20%7C%20Presentatiehoek%0A14.00%20uur%20%7C%20Workshop%3A%20vertel%20met%20beeld%20%7C%20Medialab%0A15.00%20uur%20%7C%20Vrij%20bezoek%20en%20afsluiting%20%7C%20Mediaruimte%0A%0AAanvullende%20informatie%20%E2%80%94%20Wist%20je%20dat%3F%0A%0AHetzelfde%20verhaal%20kan%20via%20verschillende%20media%20worden%20verteld.%20Een%20foto%20toont%20%C3%A9%C3%A9n%20moment%2C%20een%20video%20toont%20een%20verloop%20en%20geluid%20kan%20een%20sfeer%20oproepen.%20Door%20media%20te%20combineren%2C%20kun%20je%20verschillende%20kanten%20van%20een%20verhaal%20laten%20zien.%0A%0ABijschrift%20bij%20de%20tweede%20afbeelding%3A%0ABeeld%2C%20geluid%20en%20tekst%20zijn%20bouwstenen%20van%20een%20mediaverhaal.%0A%0AOnderdeel%20%E2%80%94%20Meer%20inspiratie%0A%0AWil%20je%20meer%20ontdekken%20over%20fotografie%3F%20Bekijk%20dan%20de%20website%20van%20het%20FOMU.%0A%0AExterne%20linktekst%3A%0AOntdek%20fotografie%20bij%20het%20FOMU%0A%0AExterne%20URL%3A%0Ahttps%3A%2F%2Ffomu.be%2F%0A%0AFooter%3A%0AWebsite%20gemaakt%20door%20%5Bvoornaam%20achternaam%5D%20%E2%80%94%205%20Crossmedia.%0AFRAME%20is%20een%20fictief%20evenement%20voor%20deze%20HTML-oefening.%0A%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0ABEELDEN%20EN%20HTML-TOEPASSING%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0A%0AKies%20zelf%20twee%20verschillende%2C%20passende%20afbeeldingen%20die%20je%20mag%20gebruiken.%0ASchrijf%20voor%20elke%20afbeelding%20een%20alt-tekst%20die%20past%20bij%20het%20echte%20beeld.%0AZet%20op%20info.html%20de%20tweede%20afbeelding%20in%20een%20figure%20met%20het%20aangeleverde%20bijschrift.%0ANoteer%20de%20beeldbronnen%20in%20reflectie.txt.%0A%0AGebruik%20strong%20voor%3A%20De%20toegang%20is%20gratis.%0AGebruik%20em%20voor%20de%20woorden%3A%20jouw%20blik%0AMaak%20op%20index.html%20een%20ankerlink%20naar%20id%3D%22ontdek%22%20bij%20%E2%80%9CWat%20kun%20je%20ontdekken%3F%E2%80%9D.%0AGebruik%20in%20het%20artikel%20op%20info.html%20een%20h2%20voor%20%E2%80%9CVan%20idee%20naar%20beeld%E2%80%9D%20en%20een%20h3%0Avoor%20%E2%80%9CZo%20neem%20je%20deel%E2%80%9D.%0ADe%20navigatie%20linkt%20naar%20index.html%20en%20info.html.%0AZet%20de%20programmagegevens%20in%20een%20tabel%2C%20niet%20in%20een%20gewone%20tekstregel.%0A" download="websiteteksten-frame.txt">↓ Download alle websiteteksten (.txt)</a>
+<div class="card"><h3>Copy / index.html</h3><p class="small">Maak van de twee onderdelen twee <code>section</code>-elementen. Geef “Wat kun je ontdekken?” het id <code>ontdek</code>. Zet de vier activiteiten in een <code>ul</code>. Plaats ook je eerste afbeelding met een zelfgeschreven <code>alt</code>-tekst.</p>
+<pre class="copytext">Browsertitel:
+FRAME — Home
+
+Paginakop:
+FRAME — Media-expo voor jonge makers
+
+Navigatie:
+Home
+Meer info
+
+Ankerlink:
+Ontdek wat je kunt beleven
+
+Onderdeel 1 — Over FRAME
+
+FRAME is een media-expo waar jonge makers hun werk tonen. Fotografie, video, geluid en digitale verhalen komen samen op één plek. Je ontdekt hoe een idee kan uitgroeien tot een verhaal dat anderen raakt.
+
+De expo is bedoeld voor jongeren van 15 tot 20 jaar die nieuwsgierig zijn naar media en creativiteit. Je hoeft geen ervaring te hebben. Kijken, luisteren en vragen stellen is genoeg om nieuwe ideeën op te doen.
+
+Onderdeel 2 — Wat kun je ontdekken?
+
+Tijdens FRAME bekijk je projecten van leerlingen en praat je met de makers achter het werk. Elk project vertrekt vanuit een eigen onderwerp en een eigen blik op de wereld. De toegang is gratis.
+
+Lijst met wat je kunt beleven:
+Fotoreeksen die een persoonlijk verhaal vertellen.
+Korte video&#x27;s die je anders naar alledaagse situaties laten kijken.
+Geluidsverhalen die sfeer en emotie oproepen.
+Digitale projecten die beeld en tekst combineren.
+
+Footer:
+Website gemaakt door [voornaam achternaam] — 5 Crossmedia.
+FRAME is een fictief evenement voor deze HTML-oefening.</pre></div>
+<div class="card" style="margin-top:28px"><h3>Copy / info.html</h3><p class="small">Gebruik een <code>article</code> voor het makersverhaal, een <code>ol</code> voor de stappen, een <code>section</code> met een echte tabel voor het programma en een <code>aside</code> voor het weetje. Plaats de tweede afbeelding in een <code>figure</code>. Het onderdeel “Meer inspiratie” krijgt een eigen <code>section</code>.</p>
+<pre class="copytext">Browsertitel:
+FRAME — Meer info
+
+Paginakop:
+FRAME — Programma en makers
+
+Navigatie:
+Home
+Meer info
+
+Artikel — Van idee naar beeld
+
+Een sterk mediaproject begint niet bij een camera of een computer, maar bij een vraag. Wat wil je vertellen? Wie wil je bereiken? De makers van FRAME zoeken eerst naar een onderwerp dat hen bezighoudt en kiezen daarna de media die bij hun verhaal passen.
+
+Bij het uitwerken van een project maken ze schetsen, verzamelen ze materiaal en testen ze verschillende versies. Ze vragen feedback en passen hun werk aan. Zo groeit een eerste idee stap voor stap uit tot een project met een duidelijke boodschap. Ook jouw blik kan het begin zijn van een nieuw verhaal.
+
+Subonderdeel van het artikel — Zo neem je deel
+
+Stappen in volgorde:
+Kies een onderwerp dat je interessant vindt en noteer wat je wilt vertellen.
+Werk je idee uit met fotografie, video, geluid of een combinatie van media.
+Breng je project mee en vertel aan bezoekers hoe je het hebt gemaakt.
+
+Onderdeel — Programma
+
+De expo vindt plaats op vrijdag 14 mei 2027 in de mediaruimte van de school. Je kunt vrij rondkijken en aansluiten bij de activiteiten die je interesseren.
+
+Tabelbijschrift:
+Programma van FRAME — vrijdag 14 mei 2027
+
+Kolomkoppen:
+Tijd | Activiteit | Locatie
+
+Gegevensrijen:
+13.00 uur | Opening van de expo | Mediaruimte
+13.30 uur | Gesprek met de makers | Presentatiehoek
+14.00 uur | Workshop: vertel met beeld | Medialab
+15.00 uur | Vrij bezoek en afsluiting | Mediaruimte
+
+Aanvullende informatie — Wist je dat?
+
+Hetzelfde verhaal kan via verschillende media worden verteld. Een foto toont één moment, een video toont een verloop en geluid kan een sfeer oproepen. Door media te combineren, kun je verschillende kanten van een verhaal laten zien.
+
+Bijschrift bij de tweede afbeelding:
+Beeld, geluid en tekst zijn bouwstenen van een mediaverhaal.
+
+Onderdeel — Meer inspiratie
+
+Wil je meer ontdekken over fotografie? Bekijk dan de website van het FOMU.
+
+Externe linktekst:
+Ontdek fotografie bij het FOMU
+
+Externe URL:
+https://fomu.be/
+
+Footer:
+Website gemaakt door [voornaam achternaam] — 5 Crossmedia.
+FRAME is een fictief evenement voor deze HTML-oefening.</pre></div>
+<aside class="note"><strong>De beelden kies je zelf.</strong> Gebruik twee verschillende afbeeldingen die passen bij fotografie of het maken van media. Het bijschrift voor de tweede afbeelding staat hierboven. Schrijf zelf een beschrijvende <code>alt</code>-tekst voor elk gekozen beeld: een alt-tekst moet overeenkomen met wat werkelijk op de afbeelding te zien is. Vermeld de beeldbronnen in <code>reflectie.txt</code>.</aside>
+</section>
+<section id="aanpak">
+<div class="heading"><span class="number">05</span><h2>Van plan naar werkende site</h2></div>
+<ol class="steps"><li><h3>Herhaal & plan je structuur</h3><p>Lees de theorie en de aangeleverde teksten voor FRAME. Noteer per pagina de onderdelen en welke HTML-elementen je daarvoor gebruikt. Zet de koppen in een logische volgorde.</p></li><li><h3>Maak je bestanden</h3><p>Maak de mappenstructuur hieronder. Bouw op beide pagina’s eerst de documentstructuur en de navigatie. Open <code>index.html</code> in je browser en test de link naar <code>info.html</code> én terug.</p></li><li><h3>Vul aan met betekenisvolle HTML</h3><p>Verwerk de aangeleverde teksten en voeg lijsten, je gekozen beelden, de gegevenstabel en structuurelementen toe. Kies telkens het element dat bij de inhoud past, niet het element dat er volgens jou mooier uitziet.</p></li><li><h3>Controleer, verbeter & leg uit</h3><p>Test beide pagina’s. Controleer de HTML met de <a href="https://validator.w3.org/nu/">W3C HTML Checker</a> via bestandsupload. Los fouten op en bekijk waarschuwingen. Bewaar de resultaten van beide pagina’s en werk je reflectie af.</p></li></ol>
+<pre><code>achternaam_voornaam_html/
+├── index.html
+├── info.html
+├── reflectie.txt
+├── images/
+│   ├── beeld-01.jpg
+│   └── beeld-02.jpg
+└── controle/
+    ├── validatie-index.png
+    └── validatie-info.png</code></pre>
+<p class="small">Afbeeldingen mogen ook PNG of WebP zijn. Pas je bestandspaden aan de echte namen en extensies aan. De map <code>controle</code> bevat screenshots van de validatieresultaten.</p>
+</section>
+<section id="inleveren">
+<div class="heading"><span class="number">06</span><h2>Klaar? Bewijs het.</h2></div>
+<div class="grid"><div class="card"><h3>Lever één zipbestand in op Smartschool</h3><p>Noem het <code>achternaam_voornaam_html.zip</code>. Het bevat de volledige projectmap: beide HTML-bestanden, de lokale afbeeldingen, je reflectie en twee validatiescreenshots.</p><p>Upload dit zipbestand bij deze opdracht op <strong>Smartschool</strong>. Lever niet alleen screenshots of losse HTML-bestanden in. Controleer na het uploaden of het juiste zipbestand bij je inzending staat.</p><p><strong>Test je zip:</strong> pak het uit in een andere map en open daar <code>index.html</code>. De site moet zonder ontbrekende bestanden werken.</p><div class="deadline">Deadline: zie de opdracht op Smartschool<br>Inleverplatform: Smartschool<br>Bestandsformaat: .zip</div></div>
+<div class="card acid"><h3>In reflectie.txt</h3><ul><li>Je naam en klas. Vermeld ook de conceptnaam FRAME en de doelgroep uit deze opdracht.</li><li>Je antwoorden op de zes theorievragen.</li><li>Eén fout die je tijdens het bouwen vond: wat ging mis en hoe loste je het op?</li><li>De bronnen van je twee beelden. Vermeld de bronlink, de maker en de licentie of toestemming, of noteer “eigen beeld”. Voor de websiteteksten noteer je “aangeleverd in de opdracht”.</li><li>Welke hulp of hulpmiddelen je gebruikte, waaronder AI als je die gebruikte. Volg de afspraken van je leerkracht en zorg dat je alle ingeleverde code zelf kunt uitleggen.</li></ul></div></div>
+<h3 style="margin-top:30px">Laatste controle voor je indient</h3>
+<ul class="check"><li>Beide pagina’s hebben een correcte basisstructuur, taalinstelling en eigen browsertitel.</li><li>Alle vereiste elementen zijn aanwezig en zinvol gebruikt.</li><li>De koppen vormen een logische hiërarchie.</li><li>De navigatie, ankerlink en externe link werken.</li><li>Beide afbeeldingen worden geladen en hebben passende alternatieve tekst.</li><li>De tabel toont gegevens en heeft een bijschrift en kolomkoppen.</li><li>Er is geen CSS, JavaScript of verouderde HTML-opmaak toegevoegd.</li><li>Beide pagina’s zijn gevalideerd; de screenshots tonen het eindresultaat.</li><li>De reflectie en bronnen zijn volledig.</li><li>Het uitgepakte zipbestand werkt vanuit een andere map.</li><li>Het volledige zipbestand is bij deze opdracht op Smartschool ingediend.</li></ul>
+</section>
+<section id="beoordeling">
+<div class="heading"><span class="number">07</span><h2>Beoordeling / 20</h2></div>
+<p>Je punten gaan naar je HTML-kennis en toepassing, niet naar visuele effecten. De leerkracht kan je vragen een stukje code kort toe te lichten.</p>
+<div class="table-wrap"><table><caption>Beoordelingsrubriek — maximaal 20 punten.</caption><thead><tr><th scope="col">Criterium</th><th scope="col">Max.</th><th scope="col">Volledige score als…</th></tr></thead><tbody>
+<tr><td>Documentbasis & codekwaliteit</td><td>4</td><td>Beide pagina’s hebben een correcte documentbasis (2 p.), correct geneste en leesbaar ingesprongen code (1 p.) en geen HTML-validatiefouten (1 p.).</td></tr>
+<tr><td>Semantische structuur</td><td>4</td><td><code>header</code>, <code>nav</code>, <code>main</code> en <code>footer</code> kloppen op beide pagina’s (1 p.); de vereiste <code>section</code>, <code>article</code> en <code>aside</code> zijn zinvol gebruikt (2 p.); de koppenhiërarchie is logisch, inclusief het subonderdeel met <code>h3</code> (1 p.).</td></tr>
+<tr><td>Basiselementen</td><td>5</td><td>Alinea’s, <code>strong</code> en <code>em</code> zijn correct gebruikt (1 p.); beide lijsten kloppen (1 p.); beide beelden, alternatieve teksten en het bijschrift kloppen (1 p.); de gegevenstabel is volledig en correct (2 p.).</td></tr>
+<tr><td>Links & bestanden</td><td>3</td><td>De navigatie werkt in beide richtingen (1 p.); ankerlink en externe link werken en zijn duidelijk benoemd (1 p.); lokale beelden en relatieve paden werken ook na uitpakken (1 p.).</td></tr>
+<tr><td>Theorie & reflectie</td><td>3</td><td>De zes antwoorden zijn juist, in eigen woorden en waar gevraagd gekoppeld aan eigen code (2 p.); je beschrijft een concrete fout en oplossing en kunt je werk toelichten (1 p.).</td></tr>
+<tr><td>Opdracht & inlevering</td><td>1</td><td>Alle aangeleverde websiteteksten zijn verwerkt, de site bevat geen CSS of JavaScript en de volledige zip met reflectie, beeldbronnen en beide validatiescreenshots is ingediend op Smartschool (1 p.).</td></tr>
+<tr><th scope="row">Totaal</th><td><strong>20</strong></td><td>Per criterium kunnen deelpunten worden toegekend voor wat aantoonbaar correct is.</td></tr>
+</tbody></table></div>
+<div class="card acid"><h3>De kernvraag</h3><p style="font-size:clamp(22px,3vw,35px);font-weight:bold;line-height:1.2;margin:0">Kan iemand jouw inhoud begrijpen — en kan jij uitleggen waarom je precies deze HTML-elementen gebruikt?</p></div>
+</section>
+</main>
+<footer class="footer"><p>5 CROSSMEDIA / HTML BASIS / STRUCTUUR VÓÓR STIJL.</p></footer>
+</body>
+</html>
